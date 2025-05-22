@@ -1,7 +1,8 @@
 # Chrome Agent Chrome 拡張機能
 
-- ※Chrome Extension のため GitHub Pages では動作しません。
+- Chrome Extension のため GitHub Pages では動作しません。
 - Gemini とやりとりできる Chrome 拡張機能です。ブラウザのサイドパネルで Gemini AI と対話することができます。
+- 動画： https://drive.google.com/file/d/19hPrwM4DUB8pk-lccwBb3HGzcfXWeqqo/view?usp=sharing
 
 ## 機能
 
