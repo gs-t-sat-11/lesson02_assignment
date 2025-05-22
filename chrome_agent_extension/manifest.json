@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Agent",
+  "version": "1.0.0",
+  "description": "Chrome上で開いているページについてAIアシスタントとやりとりできるChrome拡張機能",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "action": {
+    "default_title": "Chrome Agent"
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "permissions": [
+    "sidePanel",
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/content.js"]
+    }
+  ],
+  "options_page": "options.html"
+}

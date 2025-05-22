@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome Agent - 設定</title>
+  <link rel="stylesheet" href="css/options.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Chrome Agent - 設定</h1>
+    <div class="settings-container">
+      <div class="setting-item">
+        <label for="apiKey">Gemini API キー</label>
+        <input type="password" id="apiKey" placeholder="APIキーを入力してください">
+      </div>
+      <div class="setting-item">
+        <label for="modelSelect">Geminiモデル</label>
+        <select id="modelSelect">
+          <option value="gemini-2.5-flash-preview-05-20">Gemini 2.5 Flash Preview (最新/プレビュー)</option>
+          <option value="gemini-2.5-pro-preview-05-20">Gemini 2.5 Pro Preview (最新/プレビュー)</option>
+          <option value="gemini-1.5-pro">Gemini 1.5 Pro (推奨/安定版)</option>
+          <option value="gemini-1.5-flash">Gemini 1.5 Flash (高速/安定版)</option>
+          <option value="gemini-pro">Gemini Pro (旧バージョン)</option>
+        </select>
+        <button id="refreshModelsButton" type="button">利用可能モデルを取得</button>
+      </div>
+      <div class="setting-item">
+        <label for="maxTokens">maximum_output_tokens</label>
+        <input type="number" id="maxTokens" min="1" max="8192" value="8192">
+        <span class="setting-description">長い応答を受け取るために大きめの値を設定しています</span>
+      </div>
+      <div class="setting-item">
+        <label for="temperature">temperature</label>
+        <input type="range" id="temperature" min="0" max="10" value="7" step="1">
+        <span id="temperatureValue">0.7</span>
+      </div>
+      <div class="button-container">
+        <button id="saveButton">保存</button>
+      </div>
+    </div>
+    <div id="statusMessage"></div>
+  </div>
+  <script src="js/options.js"></script>
+</body>
+</html>

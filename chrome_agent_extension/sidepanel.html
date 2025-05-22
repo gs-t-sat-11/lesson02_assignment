@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome Agent</title>
+  <link rel="stylesheet" href="css/sidepanel.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Chrome Agent</h1>
+      <button id="settingsButton" title="設定を開く">⚙️</button>
+    </div>
+    <div class="chat-container" id="chatContainer">
+      <!-- チャット履歴がここに表示されます -->
+    </div>
+    <div class="input-container">
+      <textarea id="userInput" placeholder="Geminiに質問する..."></textarea>
+      <button id="sendButton">送信</button>
+    </div>
+  </div>
+  <script src="js/sidepanel.js"></script>
+</body>
+</html>
